@@ -1,0 +1,343 @@
+@font-face {
+  font-family: "myriad";
+  src: url('../assets/fonts/myriadpro-bold.otf');
+}
+
+@font-face {
+  font-family: "avenirheavy";
+  src: url('../assets/fonts/Avenir Heavy.ttf');
+}
+
+@font-face {
+  font-family: "calc1";
+  src: url('../assets/fonts/calc/enhanced_led_board-7.ttf');
+}
+
+@font-face {
+  font-family: "calc2";
+  src: url('../assets/fonts/calc/led_board-7.ttf');
+}
+
+@font-face {
+  font-family: "electronic";
+  src: url('../assets/fonts/elec.ttf');
+}
+
+@font-face {
+  font-family: "electronic2";
+  src: url('../assets/fonts/DisplaySt.ttf');
+}
+
+@font-face {
+  font-family: "dots";
+  src: url('../assets/fonts/calc/fanfareticker.ttf');
+}
+
+@font-face {
+  font-family: "eledis2";
+  src: url('../assets/fonts/calc/Arcade.ttf');
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.542); 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(145, 145, 145); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(191, 191, 191); 
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.logoespn{
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 20px;
+  width: 85px;
+}
+
+.logomediapro{
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  width: 130px;
+}
+
+.logoconmebol{
+  z-index: 1;
+  display: block;
+  position: absolute;
+  width: 100px;
+  top: 2px;
+  left: 5px;
+}
+
+body{
+  font-family: 'myriad';
+  overflow-y: hidden;
+  overflow-x: hidden;
+  min-height: 500px;
+  margin: 0;
+  background-color: rgb(88, 88, 88);
+}
+
+.titulo{
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  color: rgb(218, 218, 218);
+  width: 100%;
+  min-width: 900px;
+  margin: 0;
+  top: 0px;
+  height: 45px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.central{
+  position: absolute;
+  top: 90px;
+  left: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  max-width: 50%;
+  min-width: 285px;
+  padding-bottom: 4px;
+  box-shadow: inset -1px -1px 0px 0px rgba(0, 0, 0, 0.508), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.282);
+}
+
+.centralsat{
+  position: absolute;
+  left: 0px;
+  top: 150px;
+  width: 50%;
+  padding-bottom: 4px;
+  box-shadow: inset -1px -1px 0px 0px rgba(0, 0, 0, 0.508), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.282);
+}
+
+.contenedor2{
+  position: absolute;
+  right: 0px;
+  top: 150px;
+  width: 50%;
+  height: 408px;
+  padding-bottom: 4px;
+  box-shadow: inset -1px -1px 0px 0px rgba(0, 0, 0, 0.508), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.282);
+}
+
+.formularioespn{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px;
+}
+
+.cajatextoespn{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 300px;
+  height: 300px;
+  margin-bottom: 2px;
+  background-color: rgb(172, 172, 172);
+}
+
+.divbotoncitos{
+  display: block;
+  position: relative;
+  width: 100%;
+  min-width: 300px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paraclick1{
+  position: relative;
+  top: 3px;
+  left: 5px;
+  height: 25px;
+  background-color: rgb(224, 224, 224);
+  border-width: 0;
+  border-radius: 13px 0px 0px 13px;
+  box-shadow: inset 0px -10px 5px 0px rgba(5, 5, 5, 0.309), 1px 1px 1px 1px rgba(5, 5, 5, 0.446);
+}
+
+.paraclick2{
+  position: relative;
+  top: 3px;
+  left: 3px;
+  height: 25px;
+  background-color: rgb(120, 253, 120);
+  border-width: 0;
+  border-radius: 0px 13px 13px 0px;
+  box-shadow: inset 0px -10px 5px 0px rgba(5, 5, 5, 0.309), 1px 1px 1px 1px rgba(5, 5, 5, 0.446);
+}
+
+.cancelarSat{
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  width: 20%;
+  height: 25px;
+  color: #fff;
+  background-color: rgb(189, 38, 38);
+  border-width: 0;
+  border-radius: 13px 13px 13px 13px;
+  box-shadow: inset 0px -10px 5px 0px rgba(5, 5, 5, 0.309), 1px 1px 1px 1px rgba(5, 5, 5, 0.446);
+}
+
+
+.windowResultado{
+  font-family: "Tahoma";
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.windowResultadoC{
+  display: none;  
+}
+
+.salida1{
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 6px;
+  box-shadow: inset 1px 1px 3px 0px rgb(17, 17, 17);
+}
+
+.salida2{
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+  box-shadow: inset 1px 1px 3px 0px rgb(17, 17, 17);
+}
+
+.windowClock{
+  position: absolute;
+  top: 45px;
+  height: 45px;
+  width: 25%;
+  background-color: rgb(49, 75, 43);
+  min-width: 290px;
+  box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.249), inset -1px -1px 0px 0px rgba(0, 0, 0, 0.249);
+}
+.windowClock2{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 45px;
+  height: 45px;
+  width: 25%;
+  background-color: rgb(49, 75, 43);
+  min-width: 290px;
+  box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.249), inset -1px -1px 0px 0px rgba(0, 0, 0, 0.249);
+}
+.windowClock3{
+  position: absolute;
+  top: 45px;
+  right: 0px;
+  height: 45px;
+  width: 25%;
+  background-color: rgb(49, 75, 43);
+  min-width: 290px;
+  box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.249), inset -1px -1px 0px 0px rgba(0, 0, 0, 0.249);
+}
+
+.panelctrl{
+  position: relative;
+  top: 45px;
+  right: 0;
+  height: 45px;
+  width: 100%;
+  background-color: rgb(99, 99, 99);
+  min-width: 290px;
+  box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.249), inset -1px -1px 0px 0px rgba(0, 0, 0, 0.249);
+}
+
+.showtime{
+  position: relative;
+  top: 2px;
+  left: 20px;
+  color: rgb(87, 228, 181);
+  font-family: "courier";
+  font-size: 35px;
+}
+
+.ctrl3{
+  display: inline-block;
+  position: relative;
+  top: 7px;
+  left: 6px;
+  width: 150px;
+  height: 30px;
+  background-color: rgb(122, 195, 138);
+  border-width: 0;
+  border-radius: 18px;
+  box-shadow: inset 1px 1px 1px 0px rgba(255, 255, 255, 0.413), inset -1px -1px 1px 0px rgba(0, 0, 0, 0.604), inset 0px -20px 15px -5px rgba(0, 0, 0, 0.476), inset 0px 15px 15px -5px rgba(255, 255, 255, 0.459);
+}
+
+.ctrl4{
+  display: inline-block;
+  position: relative;
+  top: 7px;
+  left: 9px;
+  width: 200px;
+  height: 30px;
+  background-color: rgb(161, 172, 255);
+  border-width: 0;
+  border-radius: 18px;
+  box-shadow: inset 1px 1px 1px 0px rgba(255, 255, 255, 0.413), inset -1px -1px 1px 0px rgba(0, 0, 0, 0.604), inset 0px -20px 15px -5px rgba(0, 0, 0, 0.476), inset 0px 15px 15px -5px rgba(255, 255, 255, 0.459);
+}
+
+.rango{
+  position: absolute;
+  right: 10px;
+  top: 500px;
+}
+
+.canvas{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 420px;
+}
