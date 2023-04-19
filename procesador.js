@@ -234,33 +234,43 @@ modo1.addEventListener("click", () => {
         var parametrosbruto = reconstruccionSS.join("");
         procesamiento(parametrosbruto)
         
-        console.log(regresoalaotrafuncion)
+        let contador = 0;
+        
+        const miFuncion = () => {
+          
+          let objetivo = 130
+          datosuniversales[0].mhz = regresoalaotrafuncion[2]
+          datosuniversales[0].power = objetivo * secuencia[contador]
+          datosuniversales[0].mhz2 = datosuniversales[0].mhz - (datosuniversales[0].mhz / 100 * datosuniversales[0].mod);
+          datosuniversales[0].cielo = 0;
+          datosuniversales[0].center = datosuniversales[0].ancho/2;
+          datosuniversales[0].der = datosuniversales[0].ancho;
+          datosuniversales[0].izq = 0;
+          datosuniversales[0].suelo = datosuniversales[0].alto;
+          datosuniversales[0].factorRO = datosuniversales[0].rolloff / 100 + 1
+          datosuniversales[0].sr = datosuniversales[0].mhz / datosuniversales[0].factorRO;
+          datosuniversales[0].bw = datosuniversales[0].mhz * 10;
+          datosuniversales[0].hBW = datosuniversales[0].bw / 2;
+          datosuniversales[0].srprint = datosuniversales[0].sr * 10;
+          datosuniversales[0].prom1 = (datosuniversales[0].bw + datosuniversales[0].srprint) / 2;
+          datosuniversales[0].area1 = datosuniversales[0].prom1 * datosuniversales[0].power;
+          datosuniversales[0].factorAjuste = datosuniversales[0].mod /100 +1
+          datosuniversales[0].sr2 = datosuniversales[0].sr / datosuniversales[0].factorAjuste
+          datosuniversales[0].srprint2 = datosuniversales[0].sr2 * 10;
+          datosuniversales[0].bw2 = datosuniversales[0].mhz2 * 10;
+          datosuniversales[0].hBW2 = datosuniversales[0].bw2 / 2;
+          datosuniversales[0].prom2 = (datosuniversales[0].bw2 + datosuniversales[0].srprint2) / 2;
+          datosuniversales[0].power2 = datosuniversales[0].area1 / datosuniversales[0].prom2
+          datosuniversales[0].area2 = datosuniversales[0].prom2 * datosuniversales[0].power2
 
+          contador++;
+        
+          if (contador === secuencia.length) {
+            clearInterval(intervalId);
+          }
+        };
 
-        datosuniversales[0].mhz = regresoalaotrafuncion[2]
-        datosuniversales[0].power = 130
-
-        datosuniversales[0].mhz2 = datosuniversales[0].mhz - (datosuniversales[0].mhz / 100 * datosuniversales[0].mod);
-        datosuniversales[0].cielo = 0;
-        datosuniversales[0].center = datosuniversales[0].ancho/2;
-        datosuniversales[0].der = datosuniversales[0].ancho;
-        datosuniversales[0].izq = 0;
-        datosuniversales[0].suelo = datosuniversales[0].alto;
-        datosuniversales[0].factorRO = datosuniversales[0].rolloff / 100 + 1
-        datosuniversales[0].sr = datosuniversales[0].mhz / datosuniversales[0].factorRO;
-        datosuniversales[0].bw = datosuniversales[0].mhz * 10;
-        datosuniversales[0].hBW = datosuniversales[0].bw / 2;
-        datosuniversales[0].srprint = datosuniversales[0].sr * 10;
-        datosuniversales[0].prom1 = (datosuniversales[0].bw + datosuniversales[0].srprint) / 2;
-        datosuniversales[0].area1 = datosuniversales[0].prom1 * datosuniversales[0].power;
-        datosuniversales[0].factorAjuste = datosuniversales[0].mod /100 +1
-        datosuniversales[0].sr2 = datosuniversales[0].sr / datosuniversales[0].factorAjuste
-        datosuniversales[0].srprint2 = datosuniversales[0].sr2 * 10;
-        datosuniversales[0].bw2 = datosuniversales[0].mhz2 * 10;
-        datosuniversales[0].hBW2 = datosuniversales[0].bw2 / 2;
-        datosuniversales[0].prom2 = (datosuniversales[0].bw2 + datosuniversales[0].srprint2) / 2;
-        datosuniversales[0].power2 = datosuniversales[0].area1 / datosuniversales[0].prom2
-        datosuniversales[0].area2 = datosuniversales[0].prom2 * datosuniversales[0].power2
+        const intervalId = setInterval(miFuncion, 100);
 
 
         /// seguir aca. modificar datos universales con regresoalaotrafuncion
