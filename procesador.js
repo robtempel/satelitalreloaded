@@ -7,11 +7,12 @@ const objref2 = [0];
 const objref3 = [0];
 const objref4 = [9];
 const objref5 = [0];
-const secuencia = [0, 0.01, 0.03, 0.06, 0.105, 0.163, 0.234, 0.315, 0.411, 0.5, 0.589, 0.685, 0.766, 0.837, 0.895, 0.94, 0.97, 0.99 , 1, 1, 1]
+const secuencia = [0, 0.3, 0.8, 1.5, 1.8, 3, 3.4, 4.2, 4.8, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0.01, 0.03, 0.06, 0.105, 0.163, 0.234, 0.315, 0.411, 0.5, 0.589, 0.685, 0.766, 0.837, 0.895, 0.94, 0.97, 0.99 , 1, 1, 1]
 const regresoalaotrafuncion = []
 const datosuniversales = []
+const secuenciamhz = []
 
-var contador = 0; // Contador para llevar la cuenta de las veces que se ha ejecutado la función
+var contador = 0;
 
 var intervalo = setInterval(function() {
   jugueteo();
@@ -234,13 +235,21 @@ modo1.addEventListener("click", () => {
         var parametrosbruto = reconstruccionSS.join("");
         procesamiento(parametrosbruto)
         
-        let contador = 0;
+
+        secuenciamhz.splice(0,secuenciamhz.length)
+
+        for(i=0; i < 19; i++){
+          secuenciamhz.push(1)
+        }
+        for(i=0; i < 26; i++){
+          secuenciamhz.push(regresoalaotrafuncion[2])
+        }
+        let contador2 = 0;
         
-        const miFuncion = () => {
+        const secuenciapower = () => {
           
-          let objetivo = 130
-          datosuniversales[0].mhz = regresoalaotrafuncion[2]
-          datosuniversales[0].power = objetivo * secuencia[contador]
+          datosuniversales[0].mhz = secuenciamhz[contador2]
+          datosuniversales[0].power = 130 * secuencia[contador2]
           datosuniversales[0].mhz2 = datosuniversales[0].mhz - (datosuniversales[0].mhz / 100 * datosuniversales[0].mod);
           datosuniversales[0].cielo = 0;
           datosuniversales[0].center = datosuniversales[0].ancho/2;
@@ -263,15 +272,17 @@ modo1.addEventListener("click", () => {
           datosuniversales[0].power2 = datosuniversales[0].area1 / datosuniversales[0].prom2
           datosuniversales[0].area2 = datosuniversales[0].prom2 * datosuniversales[0].power2
 
-          contador++;
+          contador2++;
         
-          if (contador === secuencia.length) {
+          if (contador2 === secuencia.length) {
             clearInterval(intervalId);
           }
         };
 
-        const intervalId = setInterval(miFuncion, 100);
+        const intervalId = setInterval(secuenciapower, 100);
+        
 
+    
 
         /// seguir aca. modificar datos universales con regresoalaotrafuncion
 
@@ -374,7 +385,6 @@ modo1.addEventListener("click", () => {
     ctx.fillRect(0,0,datosuniversales[0].ancho,datosuniversales[0].alto);
     
     function vidaWFM(){
-      console.log(datosuniversales[0])
       ctx.fillStyle = "rgba(10,10,10,1)";
       ctx.fillRect(0,0,datosuniversales[0].ancho,datosuniversales[0].alto);
       genSecEmulador(datosuniversales[0])
