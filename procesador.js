@@ -1216,7 +1216,7 @@ function procesamiento(a){
       rolloffOK = 35;
     };
 
-    if(a.includes("20%")||a.includes("0.20")||a.includes("0,20")||a.includes("0,2")||a.includes("0.2") || a.includes(".20"){
+    if(a.includes("20%")||a.includes("0.20")||a.includes("0,20")||a.includes("0,2")||a.includes("0.2")||a.includes(".20")){
       rolloffOK = 20;
     };
 
