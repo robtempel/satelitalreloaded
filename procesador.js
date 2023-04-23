@@ -1212,7 +1212,7 @@ function procesamiento(a){
       rolloffOK = 30;
     };
     
-    if(a.includes("35%")||a.includes("0.35")||a.includes("0,35")||a.includes("0.35")){
+    if(a.includes("35%")||a.includes("0.35")||a.includes("0,35")||a.includes("0.35")||a.includes(".35")){
       rolloffOK = 35;
     };
 
@@ -1224,7 +1224,7 @@ function procesamiento(a){
       rolloffOK = 5;
     };
 
-    if(a.includes("25%")||a.includes("0.25")||a.includes("0,25")){
+    if(a.includes("25%")||a.includes("0.25")||a.includes("0,25")||a.includes(".25")){
       rolloffOK = 25;
     };
 
