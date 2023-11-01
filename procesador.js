@@ -118,7 +118,7 @@ function clockRoll(){
     <text class="showtime">:</text>
     <text class="showtime">${minutoshow}</text>
     <text class="showtime">:</text>
-    <text class="showtime">${segundosshow} GMT</text>`
+    <text class="showtime">${segundosshow} UTC</text>`
 
     timeAR = `<text class="showtime">${horaBSAS}</text>
     <text class="showtime">:</text>
