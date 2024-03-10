@@ -317,7 +317,7 @@ body{
 }
 
 .ctrl4{
-  display: inline-block;
+  display: none;
   position: relative;
   top: 7px;
   left: 9px;
